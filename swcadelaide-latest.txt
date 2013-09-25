@@ -812,4 +812,35 @@ Git exercise 1
 Create a README file, and commit it to your local repository
 
 Extra credit: export the Etherpad, and commit that too
+Git exercise 2
+Create a Github-repository called "adelaide_swc", push your changes there
+
+
+git remote add origin https://github.com/nataliethorne/adelaide_swc.git
+git push -u origin master
+Add collaborator
+#then collaborator can do:
+git clone https://github.com/nataliethorne/adelaide_swc.git
+# Colaborator can make a change to a file and commit a change
+# change in working directory (cloned directory)
+# then commit to stage
+# now use git push to put into github repository
+# person A (not collaborator) does git pull
+new person A: create a new repository on GitHub, push your local repository
+new person B: clone, make a change, push
+new person A: pull the change
+green stickies when you're done!
+github can integrate with continuous integration systems such as Travis. This means any pull request automatically triggers a run of the test suite. If the test suite still passes, we can be more confident that the pull request didn't break anything.
+git branch # lists all the available branches. The one prefixed with "*" is the branch on which the local repo is currently on
+git branch remove_caching
+git checkout remove_caching  # switch to that new branch
+git add dna_string.py
+git commit -m "Removing caching"
+# merge to master branch
+git checkout master  # reverted back to original branch called "master"
+git merge remove_caching
+git branch -D remove_caching  # now that changes are ok and have been merged can delete branch
+Commenting
+ '''  '''
+TODO:   these are automatically highlighted in Gedit
 
